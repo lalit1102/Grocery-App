@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
 
         
-        <div className="relative cursor-pointer" onClick={navigate("/cart")}>
+        <div className="relative cursor-pointer" onClick={() => navigate("/cart")}>
           <img src={assets.nav_cart_icon} alt="cart" className="w-6" />
           <span className="absolute -top-2 -right-3 w-5 h-5 flex items-center justify-center text-[10px] bg-indigo-500 text-white rounded-full">
             3
