@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home/Home'
+import { Toaster } from 'react-hot-toast'
 
 
 
@@ -11,6 +12,7 @@ const App = () => {
    <div>
    {isSellerPath ? "" :<Navbar />}
    {/* {!isSellerPath && <Navbar />} */}
+   <Toaster />
 
    <div className={`${isSellerPath ? "" : "px-16 md:px-16 lg:px-16 xl:px-32"}`}>
     <Routes>
