@@ -29,15 +29,18 @@ export const AppContextProvider = ({children}) =>{
 
   const addToCart = (itemId)=>{
     const cartData = structuredClone(cartItem)
+    console.log("add to cart",cartData)
 
     if(cartData[itemId]){
         cartData[itemId] += 1
     } else {
        cartData[itemId] = 1
     }
+    console.log("Inside addToCart (updated):", cartData)
     setCartItem(cartData)
     toast.success("Add to Cart")
   }
+
 
   // update cart quenty
 

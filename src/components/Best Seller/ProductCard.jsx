@@ -49,7 +49,6 @@ const ProductCard = ({ product }) => {
             <p className="text-xs md:text-sm">(4)</p>
           </div>
 
-          {/* Price & Cart */}
           <div className="flex items-center justify-between mt-3">
             <p className="text-base md:text-xl font-medium text-indigo-500">
               {currency}
@@ -86,7 +85,7 @@ const ProductCard = ({ product }) => {
                     onClick={() => removeFromCart(product._id)}
                     className="px-2"
                   >
-                    −
+                    -
                   </button>
                   <span className="w-4 text-center text-sm">
                     {cartItem[product._id]}
