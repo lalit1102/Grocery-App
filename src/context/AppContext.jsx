@@ -16,6 +16,8 @@ export const AppContextProvider = ({children}) =>{
   const [isSeller,setIsSeller] = useState(false)
   const [showUserLogin,setShowUserLogin] = useState(false)
 
+  const [searchQuery,setSearchQuery] = useState({})
+
   // best Selller
   const [products,setProducts] = useState([])
 
@@ -71,7 +73,7 @@ export const AppContextProvider = ({children}) =>{
   },[])
 
 
-  const value = {navigate,user,setUser,isSeller,setIsSeller,showUserLogin,setShowUserLogin,products,currency,addToCart,updateCartItem,removeFromCart,cartItem}
+  const value = {navigate,user,setUser,isSeller,setIsSeller,showUserLogin,setShowUserLogin,products,currency,addToCart,updateCartItem,removeFromCart,cartItem,searchQuery,setSearchQuery}
   return (
     <AppContext.Provider value={value}>
       {children}
